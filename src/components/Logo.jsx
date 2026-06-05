@@ -1,5 +1,5 @@
 import { useLang } from '../LanguageContext'
-import { SANATCI } from '../i18n'
+import { SANATCI, asset } from '../i18n'
 
 // Markayı bir logo gibi sunan, yeniden kullanılabilir bileşen.
 // size: 'sm' (header/footer) | 'lg' (gerekirse büyük kullanım)
@@ -15,7 +15,7 @@ export default function Logo({ size = 'sm', href = '#hero', className = '' }) {
       <span className={`relative shrink-0 ${box}`}>
         <span className="absolute inset-0 rounded-full bg-gold-500/20 opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-100" />
         <img
-          src="/logo.png"
+          src={asset('logo.png')}
           alt={`${SANATCI.isim} logosu — bağlama`}
           className="relative h-full w-full object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] transition-transform duration-300 group-hover:scale-105"
           width="56"

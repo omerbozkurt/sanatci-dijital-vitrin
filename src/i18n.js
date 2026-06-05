@@ -9,17 +9,21 @@ export const SANATCI = {
   sehir: { tr: 'Adana', en: 'Adana' },
 }
 
+// public/ içindeki bir varlığı base yoluna göre çözer (GitHub Pages alt yolu için şart).
+// dev: '/dosya'  |  build: '/sanatci-dijital-vitrin/dosya'
+export const asset = (p) => `${import.meta.env.BASE_URL}${p.replace(/^\//, '')}`
+
 // Görsel kaynakları tek noktada — hepsi yerel (public/), bağlama temalı.
 export const MEDIA = {
-  portrait: '/emirhansenol.png', // Hakkımda — Emirhan Şenol portresi
-  hero: '/baglama/hero.jpg', // sıcak ortamda bağlama icrası
+  portrait: asset('emirhansenol.png'), // Hakkımda — Emirhan Şenol portresi
+  hero: asset('baglama/hero.jpg'), // sıcak ortamda bağlama icrası
   gallery: [
-    '/baglama/g1.jpg', // sahnede solo icra (gala)
-    '/baglama/g2.jpg', // bağlama icrası
-    '/baglama/g3.jpg', // stüdyo / ev icrası
-    '/baglama/g4.jpg', // farklı boylarda bağlamalar (müfredat)
-    '/baglama/g5.jpg', // bağlama yakın çekim (uzun hava)
-    '/baglama/g6.jpg', // ekiple sahne (festival)
+    asset('baglama/g1.jpg'), // sahnede solo icra (gala)
+    asset('baglama/g2.jpg'), // bağlama icrası
+    asset('baglama/g3.jpg'), // stüdyo / ev icrası
+    asset('baglama/g4.jpg'), // farklı boylarda bağlamalar (müfredat)
+    asset('baglama/g5.jpg'), // bağlama yakın çekim (uzun hava)
+    asset('baglama/g6.jpg'), // ekiple sahne (festival)
   ],
 }
 
