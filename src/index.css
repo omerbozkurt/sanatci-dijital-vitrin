@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-800 text-stone-200 font-sans antialiased;
+    background-image:
+      radial-gradient(900px 500px at 80% -10%, rgba(27, 44, 80, 0.45), transparent 55%),
+      radial-gradient(700px 500px at -10% 20%, rgba(169, 102, 58, 0.12), transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-gold-500/30 text-gold-300;
+  }
+
+  /* İnce, premium kaydırma çubuğu */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #121214;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a30;
+    border-radius: 9999px;
+    border: 2px solid #121214;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a42;
+  }
+}
+
+@layer components {
+  /* Altın degrade metin */
+  .text-gradient-gold {
+    @apply bg-gold-grad bg-clip-text text-transparent;
+  }
+
+  /* Cam efekti (glassmorphism) yüzey */
+  .glass {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  /* İnce altın ayraç */
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-gold-500/40 to-transparent;
+  }
+}
+
+/* Hareket azaltma tercihine saygı */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

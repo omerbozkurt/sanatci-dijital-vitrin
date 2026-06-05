@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+.DS_Store
+npm-debug.log*
+
+# Yerel Claude Code araç/şablon dosyaları (ürünün parçası değil)
+.claude/

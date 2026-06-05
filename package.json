@@ -1,0 +1,26 @@
+{
+  "name": "baglama-sanatcisi-dijital-vitrin",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Konservatuvar mezunu profesyonel bağlama sanatçısı için premium dijital vitrin — özel ders ve organizasyon rezervasyonu.",
+  "author": "Ömer Bozkurt <25omerbozkurt@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "vite": "^5.4.11"
+  }
+}
